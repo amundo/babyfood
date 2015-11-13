@@ -5,9 +5,41 @@
   <title>
  baby food 
   </title>
-  <link rel=stylesheet href=style.css>
+
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Amatic+SC|Rock+Salt|Handlee|Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+
+
   <style>
-  
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Handlee";
+}
+
+h1 { 
+  text-align:center;
+}
+div { 
+  display:flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 8vh;
+  padding: 0 1em;
+  border-top: 1px solid #ccc;
+}  
+
+div h2 {
+  flex: 1;
+}
+
+div input[type="checkbox"] {
+  font-size: xx-large;
+  margin: 0 5px ;
+}
+
+div input[type="checkbox"]:hover {
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -38,7 +70,6 @@ var render = foods => {
 fetch('data.json')
   .then(r => r.json())
   .then(data => { app.data = data;  return data;})
-  .then(parse)
   .then(render)
   .catch(e => console.log(e))
 

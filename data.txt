@@ -1,0 +1,63 @@
+name
+number
+
+Fruit
+2
+
+citrus
+1
+
+lean protein
+4
+
+8oz water
+8
+
+connect with partner
+1
+
+sleep and rest
+1
+
+connect with baby
+1
+
+calcium-rich food
+4
+
+dark green veggies
+3
+
+100% whole grains
+4
+
+bright red or yellow veggies
+2
+
+omega supplement
+1
+
+prenatal vitamin
+1
+
+exercise and sunshine
+1
+
+hugs and kisses
+5
+
+kegels and squats
+1
+
+2 tbsp healthy oil
+1
+
+2 tbsp liquid chlorophyll
+1
+
+visualize birth
+1
+
+red raspberry or pregnancy tea
+1
+
