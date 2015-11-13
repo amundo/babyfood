@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+ baby food 
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<h1>
+ baby food 
+</h1>
+
+
+<script>
+app = {};
+
+var renderFood = food => {
+ var checkboxes = `<input value="${food.times}" type="checkbox">\n`.repeat(food.times);
+return `
+<div>
+  <h2>${food.name}</h2>
+  ${checkboxes}
+</div>
+
+`
+}
+
+var render = foods => {
+  document.body.insertAdjacentHTML('beforeend', foods.map(renderFood).join('\n'));
+}
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => { app.data = data;  return data;})
+  .then(parse)
+  .then(render)
+  .catch(e => console.log(e))
+
+
+
+</script>
+</body>
+</html>
