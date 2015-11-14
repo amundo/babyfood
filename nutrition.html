@@ -5,6 +5,7 @@
   <title>
  baby food 
   </title>
+<script src=fetch.js> </script>
 
 <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Amatic+SC|Rock+Salt|Handlee|Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
 
@@ -18,18 +19,29 @@
 
 h1 { 
   text-align:center;
+  font-weight:normal;
 }
+
 div { 
   display:flex;
   flex-wrap: nowrap;
   align-items: center;
-  min-height: 8vh;
+  background-size:cover;
+  background-position: center center;
+  min-height: 12vh;
   padding: 0 1em;
   border-top: 1px solid #ccc;
 }  
 
 div h2 {
   flex: 1;
+
+   text-shadow:
+      1px 1px 0 white,
+     -1px -1px 0 white,  
+      1px -1px 0 white,
+      -1px 1px 0 white,
+       1px 1px 0 white;
 }
 
 div input[type="checkbox"] {
@@ -48,33 +60,9 @@ div input[type="checkbox"]:hover {
  baby food 
 </h1>
 
-
 <script>
-app = {};
-
-var renderFood = food => {
- var checkboxes = `<input value="${food.times}" type="checkbox">\n`.repeat(food.times);
-return `
-<div>
-  <h2>${food.name}</h2>
-  ${checkboxes}
-</div>
-
-`
-}
-
-var render = foods => {
-  document.body.insertAdjacentHTML('beforeend', foods.map(renderFood).join('\n'));
-}
-
-fetch('data.json')
-  .then(r => r.json())
-  .then(data => { app.data = data;  return data;})
-  .then(render)
-  .catch(e => console.log(e))
-
-
-
 </script>
+
+<script src=babyfood.js></script>
 </body>
 </html>
